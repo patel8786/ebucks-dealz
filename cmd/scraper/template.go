@@ -10,6 +10,8 @@ var markdownTemplate = template.Must(template.New("markdownTemplate").Parse(
 
 Price: {{ .Price }}
 
+Image: {{ .Image }}
+
 Savings: {{ .Savings }}
 
 {{ if ne .Percentage "" -}}
