@@ -31,6 +31,7 @@ func LoadFromDir(dir string) ([]scraper.Product, error) {
 		if err := dec.Decode(&p); err != nil {
 			return err
 		}
+		fmt.Println("XXXXXXXZZZZZZZZZZZZ Name X is ", p.NameX)
 		ps = append(ps, p)
 		return nil
 	})
