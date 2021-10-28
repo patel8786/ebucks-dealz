@@ -119,7 +119,7 @@ func NewScraper(cacheDir string, threads int, callback ProductPageCallbackFunc) 
 			Image:      "Some text!",
 		}
 
-		fmt.Println("Found product:", p.Name, p.URL)
+		fmt.Println("Found product:", p.NameX, p.URL)
 
 		callback(p)
 	})
