@@ -28,7 +28,6 @@ func NewScraper(cacheDir string, threads int, callback ProductPageCallbackFunc) 
 		colly.AllowedDomains("www.ebucks.com"),
 		colly.URLFilters(
 			regexp.MustCompile(`https://www\.ebucks\.com/web/shop/shopHome\.do`),
-			regexp.MustCompile(`https://www\.ebucks\.com/web/shop/categorySelected\.do?catId=22767716.*`),
 			regexp.MustCompile(`https://www\.ebucks\.com/web/shop/productSelected\.do.*catId=22767716.*`),
 		),
 		colly.UserAgent("Mozilla/5.0 (Windows NT x.y; Win64; x64; rv:10.0) Gecko/20100101 Firefox/10.0"),
@@ -125,7 +124,7 @@ func NewScraper(cacheDir string, threads int, callback ProductPageCallbackFunc) 
 	})
 
 	s.colly.OnRequest(func(r *colly.Request) {
-		fmt.Println("1Visiting", r.URL.String())
+		fmt.Println("2Visiting", r.URL.String())
 	})
 
 	return s
