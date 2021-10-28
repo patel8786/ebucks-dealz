@@ -68,7 +68,6 @@ func main() {
 				BaseContext: web.BaseContext{PathPrefix: *pagePathPrefixArg},
 				Title:       "Other Products",
 				Products:    ps,
-				Image:    "<img src=\"https://www.ebucks.com/web/cms/system/galleries/pics/prodimg/XPS-18_Garden-Sprayer.png\" alt=\"\">",
 			}
 			return web.RenderDealz(w, c)
 		})
