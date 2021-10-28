@@ -21,6 +21,9 @@ jobs:
     - name: Build
       run: go build github.com/patel8786/ebucks-dealz/cmd/generate-web
 
+    - name: BuildScraper
+      run: go build github.com/patel8786/ebucks-dealz/cmd/scraper
+
     - name: Test
       run: go test github.com/patel8786/ebucks-dealz/cmd/dev-web
 
