@@ -6,7 +6,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/geniass/ebucks-dealz/pkg/scraper"
+	"github.com/patel8786/ebucks-dealz/pkg/scraper"
 )
 
 func LoadFromDir(dir string) ([]scraper.Product, error) {
