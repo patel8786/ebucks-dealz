@@ -9,7 +9,7 @@
     <thead>
         <tr>
             <th>Image</th>
-            <th>Name2</th>
+            <th>Name3</th>
             <th>Price</th>
             <th>Savings</th>
         </tr>
@@ -19,7 +19,7 @@
         {{range .Products}}
         <tr>
             <td><img src="{{.Image}}"></td>
-            <td><a href="{{.URL}}" target="_blank">{{.Name}}</a></td>
+            <td><a href="{{.URL}}" target="_blank">{{.NameX}}</a></td>
             <td>{{.Price}}</td>
             <td>{{.Savings}}</td>
         </tr>
