@@ -116,10 +116,10 @@ func NewScraper(cacheDir string, threads int, callback ProductPageCallbackFunc) 
 			Price:      e.ChildText("#randPrice"),
 			Savings:    e.ChildText(".was-price > strong:nth-child(1) > span:nth-child(1)"),
 			Percentage: e.ChildText("table#discount-table tr:last-child td.discount-icon p.percentage"),
-			Image:      "Some text!",
+			Image:      e.ChildText("[name=\"thumbnail\"]"),
 		}
 
-		fmt.Println("Found product:", p.NameX, p.URL)
+		fmt.Println("XFound product:", e.Text)
 
 		callback(p)
 	})
