@@ -16,7 +16,7 @@ import (
 
 func main() {
 	dataDirNameArg := flag.String("data-dir", "./data", "directory that contains scraped data files")
-	ouputDirArg := flag.String("output-dir", "docs2", "data to write rendered HTML content to")
+	ouputDirArg := flag.String("output-dir", "docs", "data to write rendered HTML content to")
 	pagePathPrefixArg := flag.String("path-prefix", "", "prefix page link URLs (in case pages are hosted at a subpath); should start with '/'")
         fmt.Println("XXXXXXXXXXXXXXXXXX dataDirNameArg=", dataDirNameArg)
 
@@ -43,7 +43,7 @@ func main() {
 		} else if err != nil {
 			log.Fatal(err)
 		}
-		err = renderToFile(*ouputDirArg, "discount.html", func(w io.Writer) error {
+		err = renderToFile(*ouputDirArg, "discount2.html", func(w io.Writer) error {
 			c := web.DealzContext{
 				BaseContext: web.BaseContext{PathPrefix: *pagePathPrefixArg},
 				Title:       "Discounted (40%)2",
@@ -66,7 +66,7 @@ func main() {
 			log.Fatal(err)
 		}
 		fmt.Println("XXXXXXXwriting file")
-		err = renderToFile(*ouputDirArg, "other.html", func(w io.Writer) error {
+		err = renderToFile(*ouputDirArg, "other2.html", func(w io.Writer) error {
 			c := web.DealzContext{
 				BaseContext: web.BaseContext{PathPrefix: *pagePathPrefixArg},
 				Title:       "Other Products3",
