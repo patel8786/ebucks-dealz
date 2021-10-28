@@ -4,6 +4,7 @@ import (
 	"embed"
 	"html/template"
 	"io"
+	"fmt"
 
 	"github.com/patel8786/ebucks-dealz/pkg/scraper"
 )
@@ -22,19 +23,24 @@ type DealzContext struct {
 }
 
 func RenderDealz(w io.Writer, c DealzContext) error {
+fmt.Println(" pkg web render.go RenderDealz1")
+
 	t, err := template.ParseFS(templatesFs, "templates/dealz.html.tpl")
 	if err != nil {
 		return err
 	}
+fmt.Println(" pkg web render.go RenderDealz2")
 	t, err = t.ParseFS(templatesFs, "templates/common/*")
 	if err != nil {
 		return err
 	}
 
+fmt.Println(" pkg web render.go RenderDealz3")
 	err = t.Execute(w, c)
 	if err != nil {
 		return err
 	}
+fmt.Println(" pkg web render.go RenderDealz4")
 	return nil
 }
 
