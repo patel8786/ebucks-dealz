@@ -25,7 +25,7 @@ jobs:
 
       - name: Scrape
         timeout-minutes: 240
-        run: ./scraper -overwrite -dir ./data -threads 8
+        run: github.com/patel8786/ebucks-dealz/cmd/scraper -overwrite -dir ./data -threads 8
 
       - name: Commit and push any data changes
         run: |-
@@ -37,7 +37,7 @@ jobs:
           git push
 
       - name: Render static web files
-        run: ./generate-web -data-dir ./data -output-dir ./docs -path-prefix /ebucks-dealz
+        run: github.com/patel8786/ebucks-dealz/cmd/generate-web -data-dir ./data -output-dir ./docs -path-prefix /ebucks-dealz
 
       - name: Commit and push any web file changes
         run: |-
