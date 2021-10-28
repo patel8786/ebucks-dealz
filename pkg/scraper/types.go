@@ -17,7 +17,7 @@ type Scraper struct {
 
 type Product struct {
 	URL        string
-	Name       string
+	NameX      string
 	Price      string
 	Savings    string
 	Percentage string
