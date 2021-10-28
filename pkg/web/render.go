@@ -5,7 +5,7 @@ import (
 	"html/template"
 	"io"
 
-	"github.com/geniass/ebucks-dealz/pkg/scraper"
+	"github.com/patel8786/ebucks-dealz/pkg/scraper"
 )
 
 //go:embed templates
