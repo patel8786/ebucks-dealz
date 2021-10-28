@@ -46,7 +46,7 @@ func main() {
 		err = renderToFile(*ouputDirArg, "discount.html", func(w io.Writer) error {
 			c := web.DealzContext{
 				BaseContext: web.BaseContext{PathPrefix: *pagePathPrefixArg},
-				Title:       "Discounted (40%)",
+				Title:       "Discounted (40%)2",
 				Products:    ps,
 			}
 			return web.RenderDealz(w, c)
@@ -66,10 +66,10 @@ func main() {
 			log.Fatal(err)
 		}
 		fmt.Println("XXXXXXXwriting file")
-		err = renderToFile(*ouputDirArg, "other2.html", func(w io.Writer) error {
+		err = renderToFile(*ouputDirArg, "other.html", func(w io.Writer) error {
 			c := web.DealzContext{
 				BaseContext: web.BaseContext{PathPrefix: *pagePathPrefixArg},
-				Title:       "Other Products",
+				Title:       "Other Products3",
 				Products:    ps,
 			}
 		fmt.Println("XXXXXXXb4 return")
