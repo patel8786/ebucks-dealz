@@ -1,4 +1,4 @@
-module github.com/geniass/ebucks-dealz
+module github.com/patel8786/ebucks-dealz
 
 go 1.16
 
