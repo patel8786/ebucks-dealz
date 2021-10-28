@@ -30,13 +30,13 @@ jobs:
       run: go run github.com/patel8786/ebucks-dealz/cmd/generate-web
 
     - name: Render static web files
-      run: ./generate-web -data-dir ./data -output-dir ./docs -path-prefix /ebucks-dealz
+      run: ./generate-web -data-dir ./data -output-dir ./docs2 -path-prefix /ebucks-dealz
 
     - name: Commit and push any web file changes
       run: |-
-        [ -z "$(git status --porcelain=v1 -- docs 2>/dev/null)" ] && echo "No Changes" && exit 0
+        [ -z "$(git status --porcelain=v1 -- docs2 2>/dev/null)" ] && echo "No Changes" && exit 0
         git config user.name "Scraper"
         git config user.email "actions@users.noreply.github.com"
-        git add -A docs
+        git add -A docs2
         git commit -m "Latest web"
         git push
