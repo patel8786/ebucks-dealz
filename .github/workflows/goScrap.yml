@@ -1,0 +1,34 @@
+name: Go
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.17
+
+    - name: BuildScraper
+      run: go build github.com/patel8786/ebucks-dealz/cmd/scraper
+
+    - name: Run
+      run: go run github.com/patel8786/ebucks-dealz/cmd/scraper
+
+    - name: Commit and push any data changes
+      run: |-
+          [ -z "$(git status --porcelain=v1 -- data 2>/dev/null)" ] && echo "No Changes" && exit 0
+          git config user.name "Scraper"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A data
+          git commit -m "Latest data"
+          git push
