@@ -23,12 +23,6 @@ jobs:
           go build ./cmd/scraper
           go build ./cmd/generate-web
 
-      - name: Cache scraper cache files
-        uses: actions/cache@v2
-        with:
-          path: ./cache
-          key: ebucks-colly-cache
-
       - name: Scrape
         timeout-minutes: 240
         run: ./scraper -overwrite -dir ./data -threads 8
