@@ -9,8 +9,8 @@ import (
 	"os"
 	"path/filepath"
 
-	dataio "github.com/geniass/ebucks-dealz/pkg/io"
-	"github.com/geniass/ebucks-dealz/pkg/web"
+	dataio "github.com/patel8786/ebucks-dealz/pkg/io"
+	"github.com/patel8786/ebucks-dealz/pkg/web"
 )
 
 func main() {
@@ -68,6 +68,7 @@ func main() {
 				BaseContext: web.BaseContext{PathPrefix: *pagePathPrefixArg},
 				Title:       "Other Products",
 				Products:    ps,
+				Image:    "<img src=\"https://www.ebucks.com/web/cms/system/galleries/pics/prodimg/XPS-18_Garden-Sprayer.png\" alt=\"\">",
 			}
 			return web.RenderDealz(w, c)
 		})
