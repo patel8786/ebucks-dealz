@@ -9,7 +9,7 @@
     <thead>
         <tr>
             <th>Image</th>
-            <th>Name</th>
+            <th>Name2</th>
             <th>Price</th>
             <th>Savings</th>
         </tr>
