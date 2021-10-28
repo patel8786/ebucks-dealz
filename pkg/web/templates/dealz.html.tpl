@@ -18,7 +18,7 @@
     <tbody>
         {{range .Products}}
         <tr>
-            <td><img src="{{.URL}}"></td>
+            <td><img src="{{.Image}}"></td>
             <td><a href="{{.URL}}" target="_blank">{{.Name}}</a></td>
             <td>{{.Price}}</td>
             <td>{{.Savings}}</td>
