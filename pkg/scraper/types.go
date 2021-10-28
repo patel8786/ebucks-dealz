@@ -21,4 +21,5 @@ type Product struct {
 	Price      string
 	Savings    string
 	Percentage string
+	Image      string
 }
