@@ -65,12 +65,14 @@ func main() {
 		} else if err != nil {
 			log.Fatal(err)
 		}
-		err = renderToFile(*ouputDirArg, "other.html", func(w io.Writer) error {
+		fmt.Println("XXXXXXXwriting file")
+		err = renderToFile(*ouputDirArg, "other2.html", func(w io.Writer) error {
 			c := web.DealzContext{
 				BaseContext: web.BaseContext{PathPrefix: *pagePathPrefixArg},
 				Title:       "Other Products",
 				Products:    ps,
 			}
+		fmt.Println("XXXXXXXb4 return")
 			return web.RenderDealz(w, c)
 		})
 		if err != nil {
