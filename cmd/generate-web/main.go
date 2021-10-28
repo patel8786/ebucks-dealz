@@ -6,6 +6,7 @@ import (
 	"io"
 	"io/fs"
 	"log"
+	"fmt"
 	"os"
 	"path/filepath"
 
@@ -17,6 +18,7 @@ func main() {
 	dataDirNameArg := flag.String("data-dir", "./data", "directory that contains scraped data files")
 	ouputDirArg := flag.String("output-dir", "docs", "data to write rendered HTML content to")
 	pagePathPrefixArg := flag.String("path-prefix", "", "prefix page link URLs (in case pages are hosted at a subpath); should start with '/'")
+        fmt.Println("XXXXXXXXXXXXXXXXXX TEST")
 
 	flag.Parse()
 
