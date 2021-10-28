@@ -5,7 +5,7 @@ import "text/template"
 var markdownTemplate = template.Must(template.New("markdownTemplate").Parse(
 	`
 # Ebucks Dealz
-## {{ .Name }}
+## {{ .NameX }}
 [Product Page]({{ .URL }})
 
 Price: {{ .Price }}
