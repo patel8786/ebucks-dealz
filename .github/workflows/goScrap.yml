@@ -22,7 +22,7 @@ jobs:
       run: go build github.com/patel8786/ebucks-dealz/cmd/scraper
 
     - name: Run
-      run: go run github.com/patel8786/ebucks-dealz/cmd/scraper -threads 8
+      run: go run github.com/patel8786/ebucks-dealz/cmd/scraper -overwrite -dir ./data -threads 8
 
     - name: Commit and push any data changes
       run: |-
