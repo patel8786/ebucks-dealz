@@ -132,7 +132,7 @@ func NewScraper(cacheDir string, threads int, callback ProductPageCallbackFunc) 
 }
 
 func (s Scraper) Start() error {
-	if err := s.visit("https://www.ebucks.com/web/shop/shopHome.do"); err != nil {
+	if err := s.visit("https://www.ebucks.com/web/shop/shopHome.do?catId=227677169"); err != nil {
 		return err
 	}
 
