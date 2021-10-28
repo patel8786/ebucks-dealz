@@ -9,7 +9,7 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/geniass/ebucks-dealz/pkg/scraper"
+	"github.com/patel8786/ebucks-dealz/pkg/scraper"
 )
 
 var safeFilenameReplaceRegex = regexp.MustCompile(`[^a-zA-Z0-9-]+`)
