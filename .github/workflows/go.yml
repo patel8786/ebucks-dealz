@@ -23,3 +23,7 @@ jobs:
 
     - name: Test
       run: go test github.com/patel8786/ebucks-dealz/cmd/dev-web
+
+    - name: Run
+      run: go github.com/patel8786/ebucks-dealz/cmd/generate-web
+
