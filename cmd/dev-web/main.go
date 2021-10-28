@@ -4,8 +4,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/geniass/ebucks-dealz/pkg/io"
-	"github.com/geniass/ebucks-dealz/pkg/web"
+	"github.com/patel8786/ebucks-dealz/pkg/io"
+	"github.com/patel8786/ebucks-dealz/pkg/web"
 )
 
 func main() {
