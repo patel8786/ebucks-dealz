@@ -42,7 +42,7 @@ func main() {
 
 	s := scraper.NewScraper(*cacheDirArg, *threadsArg, func(p scraper.Product) {
 		if p.Percentage == "" {
-			dir := filepath.Join(dirname, "other")
+			dir := filepath.Join(dirname, "other_2")
 			if err := os.MkdirAll(dir, os.ModeDir|0755); err != nil {
 				log.Fatal(err)
 			}
@@ -59,7 +59,7 @@ func main() {
 			}
 		} else {
 			// HACK!!! fnb broke the website so now it just shows '%' instead of '40%'
-			dir := filepath.Join(dirname, "40%")
+			dir := filepath.Join(dirname, "40%_2")
 			if err := os.MkdirAll(dir, os.ModeDir|0755); err != nil {
 				log.Fatal(err)
 			}
