@@ -119,7 +119,8 @@ func NewScraper(cacheDir string, threads int, callback ProductPageCallbackFunc) 
 			Image:      e.ChildText("[name=\"thumbnail\"]"),
 		}
 
-		fmt.Println("XFound product DOM:", e.DOM.Html())
+		e1, err1 := e.DOM.Html()
+	        fmt.Println(e1, err1)
 		fmt.Println("XFound product NAME:", e.Name)
 		fmt.Println("XFound product Text:", e.Text)
 
