@@ -18,7 +18,6 @@ func main() {
 	dataDirNameArg := flag.String("data-dir", "./data", "directory that contains scraped data files")
 	ouputDirArg := flag.String("output-dir", "docs", "data to write rendered HTML content to")
 	pagePathPrefixArg := flag.String("path-prefix", "", "prefix page link URLs (in case pages are hosted at a subpath); should start with '/'")
-        fmt.Println("XXXXXXXXXXXXXXXXXX dataDirNameArg=", dataDirNameArg)
 
 	flag.Parse()
 
@@ -36,7 +35,7 @@ func main() {
 
 	{
 		// Discounted products
-		dataDir := filepath.Join(*dataDirNameArg, "40%/raw")
+		dataDir := filepath.Join(*dataDirNameArg, "40%_2/raw")
 		ps, err := dataio.LoadFromDir(dataDir)
 		if errors.Is(err, fs.ErrNotExist) {
 			log.Printf("WARNING: data dir %q does not exist, assuming no deals...\n", dataDir)
@@ -46,7 +45,7 @@ func main() {
 		err = renderToFile(*ouputDirArg, "discount2.html", func(w io.Writer) error {
 			c := web.DealzContext{
 				BaseContext: web.BaseContext{PathPrefix: *pagePathPrefixArg},
-				Title:       "Discounted (40%)2",
+				Title:       "Discounted (40%)",
 				Products:    ps,
 			}
 			return web.RenderDealz(w, c)
@@ -58,21 +57,21 @@ func main() {
 
 	{
 		// Other products
-		dataDir := filepath.Join(*dataDirNameArg, "other/raw")
+		dataDir := filepath.Join(*dataDirNameArg, "other_2/raw")
 		ps, err := dataio.LoadFromDir(dataDir)
 		if errors.Is(err, fs.ErrNotExist) {
 			log.Printf("WARNING: data dir %q does not exist, assuming no deals...\n", dataDir)
 		} else if err != nil {
 			log.Fatal(err)
 		}
-		fmt.Println("XXXXXXXwriting file")
+
 		err = renderToFile(*ouputDirArg, "other2.html", func(w io.Writer) error {
 			c := web.DealzContext{
 				BaseContext: web.BaseContext{PathPrefix: *pagePathPrefixArg},
-				Title:       "Other Products3",
+				Title:       "Other Products",
 				Products:    ps,
 			}
-		fmt.Println("XXXXXXXb4 return")
+
 			return web.RenderDealz(w, c)
 		})
 		if err != nil {
