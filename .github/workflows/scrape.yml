@@ -37,7 +37,7 @@ jobs:
           git push
 
       - name: Render static web files
-        run: github.com/patel8786/ebucks-dealz/cmd/generate-web -data-dir ./data -output-dir ./docs -path-prefix /ebucks-dealz
+        run: go run github.com/patel8786/ebucks-dealz/cmd/generate-web -data-dir ./data -output-dir ./docs -path-prefix /ebucks-dealz
 
       - name: Commit and push any web file changes
         run: |-
