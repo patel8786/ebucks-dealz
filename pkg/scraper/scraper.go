@@ -123,7 +123,7 @@ func NewScraper(cacheDir string, threads int, callback ProductPageCallbackFunc) 
 	})
 
 	s.colly.OnRequest(func(r *colly.Request) {
-		fmt.Println("2Visiting", r.URL.String())
+		fmt.Println("Visiting", r.URL.String())
 	})
 
 	return s
