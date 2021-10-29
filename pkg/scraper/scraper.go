@@ -29,7 +29,7 @@ func NewScraper(cacheDir string, threads int, callback ProductPageCallbackFunc) 
 		colly.URLFilters(
 			regexp.MustCompile(`https://www\.ebucks\.com/web/shop/shopHome\.do`),
 			regexp.MustCompile(`https://www\.ebucks\.com/web/shop/categorySelected\.do.*`),
-			regexp.MustCompile(`https://www\.ebucks\.com/web/shop/productSelected\.do.*catId=37550936.*`),
+			regexp.MustCompile(`https://www\.ebucks\.com/web/shop/productSelected\.do.*`),
 		),
 		colly.UserAgent("Mozilla/5.0 (Windows NT x.y; Win64; x64; rv:10.0) Gecko/20100101 Firefox/10.0"),
 	}
@@ -118,11 +118,6 @@ func NewScraper(cacheDir string, threads int, callback ProductPageCallbackFunc) 
 			Percentage: e.ChildText("table#discount-table tr:last-child td.discount-icon p.percentage"),
 			Image:      e.ChildAttr("meta[name=thumbnail]", "content"),
 		}
-
-		e1, err1 := e.DOM.Html()
-	        fmt.Println(e1, err1)
-		fmt.Println("XFound product e.ChildText name=thumbnail:", e.ChildText("[name=\"thumbnail\"]"))
-		fmt.Println("XFound product Text:", e.Text)
 
 		callback(p)
 	})
