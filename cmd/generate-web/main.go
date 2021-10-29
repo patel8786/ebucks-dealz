@@ -6,7 +6,6 @@ import (
 	"io"
 	"io/fs"
 	"log"
-	"fmt"
 	"os"
 	"path/filepath"
 
