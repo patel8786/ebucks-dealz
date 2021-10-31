@@ -119,6 +119,8 @@ func NewScraper(cacheDir string, threads int, callback ProductPageCallbackFunc) 
 			Image:      e.ChildAttr("meta[name=thumbnail]", "content"),
 		}
 		fmt.Println("XXXXXXXXXXWAS PRICE:", e.ChildText(".was-price > strong:nth-child(1) > span:nth-child(1)"))
+		fmt.Println("XXXXXXXXXXWAS PRICE:", e.DOM)
+		fmt.Println("XXXXXXXXXXWAS PRICE:", e.Html)
 		fmt.Println("XXXXXXXXXXWAS PRICE:", e.ChildText(".was-price > strong:nth-child(1) > span:nth-child(1)").Html)
 		fmt.Println("XXXXXXXXXXWAS PRICE:", e.ChildText(".was-price").Html)
 		callback(p)
