@@ -25,5 +25,10 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     </body>
+
+<footer>
+  <p>Source:  <a href="https://github.com/patel8786/ebucks-dealz">https://github.com/patel8786/ebucks-dealz</a></p>
+  <p>Fork & Credits: <a href="https://github.com/geniass/ebucks-dealz">https://github.com/geniass/ebucks-dealz</a></p>
+</footer>
 </html>
 {{end}}
