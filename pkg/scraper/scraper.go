@@ -118,8 +118,31 @@ func NewScraper(cacheDir string, threads int, callback ProductPageCallbackFunc) 
 			Percentage: e.ChildText("table#discount-table tr:last-child td.discount-icon p.percentage"),
 			Image:      e.ChildAttr("meta[name=thumbnail]", "content"),
 		}
-		fmt.Println("XXXXXXXXXXWAS PRICE:", e.ChildText(".was-price > strong:nth-child(1) > span:nth-child(1)"))
-		fmt.Println("XXXXXXXXXXWAS PRICE:", e.DOM)
+		
+		
+		e.ForEach(".was-price", func(_ int, e2 *colly.HTMLElement) {
+			fmt.Println("YYYYYYYYYY e2.name: ", e2.Name)
+			fmt.Println("YYYYYYYYYY e2.txt: ", e2.Text)
+			fmt.Println("YYYYYYYYYY resp.body: ", e2.Response.Body)
+			var productName string
+
+			productName = e.ChildText("span.a-size-medium.a-color-base.a-text-normal")
+
+			if productName == "" {
+				// If we can't get any name, we return and go directly to the next element
+				return
+			}
+
+			fmt.Printf("Product Name: %s \n", productName)
+		})
+		
+		
+		fmt.Println("XXXXXXXXXXWAS PRICE1:", e.ChildText(".was-price > strong:nth-child(1) > span:nth-child(1)"))
+		fmt.Println("XXXXXXXXXXWAS PRICE2:", e.ChildText(".was-price > strong:nth-child(1)"))
+		fmt.Println("XXXXXXXXXXWAS PRICE3:", e.ChildText(".was-price"))
+		fmt.Println("XXXXXXXXXXe name:", e.Name)
+		fmt.Println("XXXXXXXXXXe dom :", e.DOM)
+		fmt.Println("XXXXXXXXXXe dom :", e.Response.Body)
 		callback(p)
 	})
 
