@@ -29,7 +29,7 @@ func NewScraper(cacheDir string, threads int, callback ProductPageCallbackFunc) 
 		colly.URLFilters(
 			regexp.MustCompile(`https://www\.ebucks\.com/web/shop/shopHome\.do`),
 			regexp.MustCompile(`https://www\.ebucks\.com/web/shop/categorySelected\.do.*`),
-			regexp.MustCompile(`https://www\.ebucks\.com/web/shop/productSelected\.do.*&catId=704982758`),
+			regexp.MustCompile(`https://www\.ebucks\.com/web/shop/productSelected\.do.*`),
 		),
 		colly.UserAgent("Mozilla/5.0 (Windows NT x.y; Win64; x64; rv:10.0) Gecko/20100101 Firefox/10.0"),
 	}
