@@ -124,16 +124,13 @@ func NewScraper(cacheDir string, threads int, callback ProductPageCallbackFunc) 
 			fmt.Println("YYYYYYYYYY e2.name: ", e2.Name)
 			fmt.Println("YYYYYYYYYY e2.txt: ", e2.Text)
 			fmt.Println("YYYYYYYYYY resp.body: ", e2.Response.Body)
-			var productName string
-
-			productName = e.ChildText("span.a-size-medium.a-color-base.a-text-normal")
-
-			if productName == "" {
-				// If we can't get any name, we return and go directly to the next element
-				return
-			}
-
-			fmt.Printf("Product Name: %s \n", productName)
+			
+			e2.ForEach(".was-price", func(_ int, e3 *colly.HTMLElement) {
+			fmt.Println("ZZZZZZZZZZZ e3.name: ", e3.Name)
+			fmt.Println("ZZZZZZZZZZZ e3.txt: ", e3.Text)
+			fmt.Println("ZZZZZZZZZZZ resp.body: ", e3.Response.Body)
+			})
+			
 		})
 		
 		
