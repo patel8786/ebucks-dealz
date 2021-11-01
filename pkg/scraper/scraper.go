@@ -124,7 +124,7 @@ func NewScraper(cacheDir string, threads int, callback ProductPageCallbackFunc) 
 			fmt.Println("YYYYYYYYYY e2.name: ", e2.Name)
 			fmt.Println("YYYYYYYYYY e2.txt: ", e2.Text)
 			
-			e2.ForEach(".was-price", func(_ int, e3 *colly.HTMLElement) {
+			e2.ForEach("*", func(_ int, e3 *colly.HTMLElement) {
 			fmt.Println("ZZZZZZZZZZZ e3.name: ", e3.Name)
 			fmt.Println("ZZZZZZZZZZZ e3.txt: ", e3.Text)
 			})
