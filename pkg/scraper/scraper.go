@@ -119,9 +119,18 @@ func NewScraper(cacheDir string, threads int, callback ProductPageCallbackFunc) 
 			Image:      e.ChildAttr("meta[name=thumbnail]", "content"),
 		}
 		
-		d, err := e.DOM.Html()
-		fmt.Println("YYYYYYYYYY html: ", d, err)
+#		d, err := e.DOM.Html()
+#		fmt.Println("XXXXXXXXXX html: ", d, err)
 
+		
+#		e.ForEach(".was-price", func(_ int, e2 *colly.HTMLElement) {
+#			fmt.Println("YYYYYYYYYY e2.name: ", e2.Name)
+#			fmt.Println("YYYYYYYYYY e2.txt: ", e2.Text)
+#			d2, err2 := e2.DOM.Html()
+#			fmt.Println("YYYYYYYYYY html: ", d2, err2)
+#		})
+		
+		
 		callback(p)
 	})
 
