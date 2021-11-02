@@ -5,7 +5,7 @@
 
 Price: R120339.00
 
-Image: /web/cms/system/galleries/pics/prodimg/Sunsync-graphic.gif
+Image: /web/cms/system/galleries/pics/prodimg/1231048795_detail_1635876900773.png
 
 Savings: 
 
