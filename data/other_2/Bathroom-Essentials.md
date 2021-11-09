@@ -1,0 +1,13 @@
+
+# Ebucks Dealz
+## Bathroom Essentials
+[Product Page](https://www.ebucks.com/web/shop/productSelected.do?prodId=1186060629&catId=909917204)
+
+Price: R385.00
+
+Image: /web/cms/system/galleries/pics/prodimg/BATH-ESS-0423.png
+
+Savings: 
+
+
+	
