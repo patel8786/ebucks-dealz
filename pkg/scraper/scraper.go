@@ -16,6 +16,7 @@ import (
 )
 
 const maxNumRetries int = 5
+redirectErrors int = 0
 
 var categorySelectedUrlCleanerRegex = regexp.MustCompile(`(.*categorySelected\.do).*(catId=\d+).*`)
 
@@ -68,6 +69,7 @@ func NewScraper(cacheDir string, threads int, callback ProductPageCallbackFunc) 
 		if req.URL.String() == "https://www.ebucks.com/web/eBucks" {
 			fmt.Fprintf(os.Stderr, "Redirect to Home page. Sleeping for 10 seconds. %s -> %s\n", via[0].URL.String(), req.URL.String())
 			if redirectErrors < 20 {
+				redirectErrors = redirectErrors + 1
 				time.Sleep(10 * time.Second)
 				if err := s.visit(via[0].URL.String()); err != nil {
 					return err
