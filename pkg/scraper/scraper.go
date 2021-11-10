@@ -16,8 +16,8 @@ import (
 )
 
 const maxNumRetries int = 5
-redirectErrors int = 0
 
+var redirectErrors = 0
 var categorySelectedUrlCleanerRegex = regexp.MustCompile(`(.*categorySelected\.do).*(catId=\d+).*`)
 
 type ProductPageCallbackFunc func(p Product)
