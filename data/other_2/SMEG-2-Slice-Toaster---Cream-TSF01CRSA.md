@@ -1,11 +1,11 @@
 
 # Ebucks Dealz
 ## SMEG: 2-Slice Toaster - Cream TSF01CRSA
-[Product Page](https://www.ebucks.com/web/shop/productSelected.do?prodId=286771545&catId=704985963)
+[Product Page](https://www.ebucks.com/web/shop/productSelected.do?prodId=1231088641&catId=1196428103)
 
-Price: R2579.00
+Price: R1999.00
 
-Image: /web/cms/system/galleries/pics/prodimg/smeg-15433_300.jpg
+Image: /web/cms/system/galleries/pics/prodimg/smeg-15433_300BB.jpg
 
 Savings: 
 
