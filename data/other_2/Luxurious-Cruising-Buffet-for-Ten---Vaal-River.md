@@ -1,0 +1,13 @@
+
+# Ebucks Dealz
+## Luxurious Cruising Buffet for Ten - Vaal River
+[Product Page](https://www.ebucks.com/web/shop/productSelected.do?prodId=212911417&catId=714893646)
+
+Price: R5199.00
+
+Image: /web/cms/system/galleries/pics/prodimg/celestial-stone_haven_lunch_cruise_300.jpg
+
+Savings: 
+
+
+	
