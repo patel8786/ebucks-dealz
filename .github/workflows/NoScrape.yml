@@ -1,0 +1,45 @@
+name: Scrape Latest eBucks Deals
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '5 0/1 * * *'
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: Setup Go environment
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.17
+
+      - name: Build
+        run: |-
+          go build github.com/patel8786/ebucks-dealz/cmd/generate-web
+          go build github.com/patel8786/ebucks-dealz/cmd/scraper
+
+      - name: Commit and push any data changes
+        run: |-
+          [ -z "$(git status --porcelain=v1 -- data 2>/dev/null)" ] && echo "No Changes" && exit 0
+          git config user.name "Scraper"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A data
+          git commit -m "Latest data"
+          git push
+
+      - name: Render static web files
+        run: go run github.com/patel8786/ebucks-dealz/cmd/generate-web -data-dir ./data -output-dir ./docs -path-prefix /ebucks-dealz
+
+      - name: Commit and push any web file changes
+        run: |-
+          [ -z "$(git status --porcelain=v1 -- docs 2>/dev/null)" ] && echo "No Changes" && exit 0
+          git config user.name "Scraper"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A docs
+          git commit -m "Latest web"
+          git push
