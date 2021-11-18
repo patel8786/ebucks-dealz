@@ -18,7 +18,7 @@
     <tbody>
         {{range .Products}}
         <tr>
-            <td><img src="https://www.ebucks.com/{{.Image}}" width="10%" height="10%"></td>
+            <td><img src="https://www.ebucks.com/{{.Image}}" style="max-width: 230px; max-height: 230px"></td>
             <td><a href="{{.URL}}" target="_blank">{{.NameX}}</a></td>
             <td>{{.Price}}</td>
             <td>{{.Savings}}</td>
