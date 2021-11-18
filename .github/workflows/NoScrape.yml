@@ -1,4 +1,4 @@
-name: Scrape Latest eBucks Deals
+name: No Scrape
 
 on:
   workflow_dispatch:
