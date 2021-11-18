@@ -69,14 +69,14 @@ func NewScraper(cacheDir string, threads int, callback ProductPageCallbackFunc) 
 		if req.URL.String() == "https://www.ebucks.com/web/eBucks" || req.URL.String() == "https://www.ebucks.com/web/eBucks/" {
 			fmt.Fprintf(os.Stderr, "Redirect to Home page. Sleeping for 20 seconds. %s -> %s\n", via[0].URL.String(), req.URL.String())
 			time.Sleep(20 * time.Second)
-/*			if redirectErrors < 20 {
+			if redirectErrors < 20 {
 				redirectErrors = redirectErrors + 1
 				if err := s.visit(via[0].URL.String()); err != nil {
 					return err
 				}
 			} else {
 				return fmt.Errorf("Too many redirect errors %q : %+v", req.URL.String(), req.Header)
-			}*/
+			}
 		}
 		fmt.Fprintf(os.Stderr, "Redirecting %s -> %s\n", via[0].URL.String(), req.URL.String())
 
