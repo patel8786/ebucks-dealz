@@ -9,5 +9,5 @@ Image: /web/cms/system/galleries/pics/prodimg/R_Forerunner45_HR_1001.9.jpg
 
 Savings: 
 
-
+Percentage off: %
 	

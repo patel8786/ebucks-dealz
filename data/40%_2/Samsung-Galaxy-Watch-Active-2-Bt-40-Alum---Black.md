@@ -9,5 +9,5 @@ Image: /web/cms/system/galleries/pics/prodimg/1225442185_detail_1633602817833.pn
 
 Savings: 
 
-
+Percentage off: %
 	

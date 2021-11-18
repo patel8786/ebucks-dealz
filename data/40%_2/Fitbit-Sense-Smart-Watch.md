@@ -9,5 +9,5 @@ Image: /web/cms/system/galleries/pics/prodimg/FITFB512GLWT_1.jpg
 
 Savings: 
 
-
+Percentage off: %
 	

@@ -9,5 +9,5 @@ Image: /web/cms/system/galleries/pics/prodimg/Venu2S_HR_3000.14.png
 
 Savings: 
 
-
+Percentage off: %
 	
