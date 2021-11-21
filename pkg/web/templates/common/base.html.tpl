@@ -16,7 +16,7 @@
             <a href="{{.PathPrefix}}" class="brand-logo">Ebucks Dealz</a>
         </div>
     </nav>
-
+<p>
     <div class="container">
 
     {{template "content" .}}
