@@ -1,0 +1,13 @@
+
+# Ebucks Dealz
+## Astrum: M2 Wireless BT IP68 Sports Smart Watch (Assorted Colours)
+[Product Page](https://www.ebucks.com/web/shop/productSelected.do?prodId=1220375057&catId=1207278446)
+
+Price: R599.00
+
+Image: /web/cms/system/galleries/pics/prodimg/M2-pink.jpg
+
+Savings: 
+
+
+	
