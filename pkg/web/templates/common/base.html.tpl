@@ -12,7 +12,7 @@
     <body>
 
     <nav>
-        <div class="nav-wrapper container">
+        <div class="nav-wrapper container" style="white-space:nowrap">
             <a href="{{.PathPrefix}}" class="brand-logo">Ebucks Dealz</a>
         </div>
     </nav>
