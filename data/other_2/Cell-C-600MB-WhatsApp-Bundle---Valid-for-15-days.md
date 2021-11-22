@@ -1,0 +1,13 @@
+
+# Ebucks Dealz
+## Cell C 600MB WhatsApp Bundle - Valid for 15 days
+[Product Page](https://www.ebucks.com/web/shop/productSelected.do?prodId=1028444378&catId=300)
+
+Price: R20.00
+
+Image: /web/cms/system/galleries/pics/prodimg/1028444378_detail_1599752170106.jpg
+
+Savings: 
+
+
+	
