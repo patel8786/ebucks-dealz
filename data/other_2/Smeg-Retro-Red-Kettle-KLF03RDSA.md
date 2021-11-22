@@ -1,0 +1,13 @@
+
+# Ebucks Dealz
+## Smeg: Retro Red Kettle KLF03RDSA
+[Product Page](https://www.ebucks.com/web/shop/productSelected.do?prodId=1231082608&catId=1196428103)
+
+Price: R1999.00
+
+Image: /web/cms/system/galleries/pics/prodimg/258485614_detail_1607524338118 E.png
+
+Savings: 
+
+
+	

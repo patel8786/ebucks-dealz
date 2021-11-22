@@ -1,0 +1,13 @@
+
+# Ebucks Dealz
+## Calvin Klein Unisex Round Sunglasses - Gold Frame with Satin Gep Lens - Light Blue Frame with Shiny Light Blue Lens
+[Product Page](https://www.ebucks.com/web/shop/productSelected.do?prodId=1135645517&catId=375509364)
+
+Price: R2299.00
+
+Image: /web/cms/system/galleries/pics/prodimg/CK19500S-448_1.jpg
+
+Savings: 
+
+
+	
