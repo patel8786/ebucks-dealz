@@ -1,0 +1,13 @@
+
+# Ebucks Dealz
+## DEWALT - 800W-Corded Variable Speed Blower
+[Product Page](https://www.ebucks.com/web/shop/productSelected.do?prodId=1070064645&catId=363410833)
+
+Price: R1059.00
+
+Image: /web/cms/system/galleries/pics/prodimg/DWB800-(2).png
+
+Savings: 
+
+
+	
