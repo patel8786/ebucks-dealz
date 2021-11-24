@@ -1,0 +1,13 @@
+
+# Ebucks Dealz
+## OZtrail TASMAN 3 DOME TENT
+[Product Page](https://www.ebucks.com/web/shop/productSelected.do?prodId=1055639081&catId=714965764)
+
+Price: R899.00
+
+Image: /web/cms/system/galleries/pics/prodimg/DTM3P-C.png
+
+Savings: 
+
+
+	
