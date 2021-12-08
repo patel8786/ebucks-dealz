@@ -27,6 +27,11 @@
     </body>
 
 <footer>
+  <p id="displayDate"></p>
+  <script>
+    const d = new Date();
+    document.getElementById("displayDate").innerHTML = "Last refreshed: " + d;
+  </script>
   <p>Source:  <a href="https://github.com/patel8786/ebucks-dealz">https://github.com/patel8786/ebucks-dealz</a></p>
   <p>Fork & Credits: <a href="https://github.com/geniass/ebucks-dealz">https://github.com/geniass/ebucks-dealz</a></p>
 </footer>
